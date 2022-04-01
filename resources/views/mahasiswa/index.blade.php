@@ -3,10 +3,17 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left mt-2">
-            <h2>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>
+            <h2 href=>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>
         </div>
-        <div class="float-right my-2">
+            <div class="float-right">
             <a class="btn btn-success" href="{{ route('mahasiswa.create') }}"> Input Mahasiswa</a>
+            </div>
+        <form class="form" method="get" action="{{ route('search') }}">
+            <div class="form-group w-100 mb-3">
+        <!-- <label for="search" class="d-block mr-2"><b>Pencarian</b></label> -->
+        <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="Masukkan Kata kunci yang akan dicari">
+        <button type="submit" class="btn btn-primary mb-1">Cari</button>
+</form>
         </div>
     </div>
 </div>
@@ -17,13 +24,13 @@
 @endif
 <table class="table table-bordered">
     <!-- menambahkan view untuk menu search -->
-<form class="form" method="get" action="{{ route('search') }}">
+<!-- <form class="form" method="get" action="{{ route('search') }}">
     <div class="form-group w-100 mb-3">
         <label for="search" class="d-block mr-2"><b>Pencarian</b></label>
         <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="Masukkan Kata kunci yang akan dicari">
         <button type="submit" class="btn btn-primary mb-1">Cari</button>
     </div>
-</form>
+</form> -->
     <tr>
         <th>Nim</th>
         <th>Nama</th>
@@ -59,6 +66,7 @@
 <!-- {{$mahasiswa->links()}} -->
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
+  <a class="btn btn-success" href="{{ route('mahasiswa.index') }}"> Beranda</a>
     <!-- <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1">Previous</a>
     </li> -->
