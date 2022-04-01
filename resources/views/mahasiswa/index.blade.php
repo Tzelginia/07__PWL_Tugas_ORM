@@ -48,4 +48,5 @@
     </tr>
     @endforeach
 </table>
+{{$mahasiswa->links()}}
 @endsection
