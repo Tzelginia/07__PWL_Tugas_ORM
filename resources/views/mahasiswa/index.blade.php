@@ -65,13 +65,7 @@
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
   <a class="btn btn-success" href="{{ route('mahasiswa.index') }}"> Beranda</a>
-    <!-- <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
-    </li> -->
     {{$mahasiswa->links()}}
-    <!-- <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li> -->
   </ul>
 </nav>
 @endsection
