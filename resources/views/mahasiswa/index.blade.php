@@ -22,15 +22,9 @@
     <p>{{ $message }}</p>
 </div>
 @endif
+<!-- menambahkan pemilihan -->
+@if ($mahasiswa->count())
 <table class="table table-bordered">
-    <!-- menambahkan view untuk menu search -->
-<!-- <form class="form" method="get" action="{{ route('search') }}">
-    <div class="form-group w-100 mb-3">
-        <label for="search" class="d-block mr-2"><b>Pencarian</b></label>
-        <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="Masukkan Kata kunci yang akan dicari">
-        <button type="submit" class="btn btn-primary mb-1">Cari</button>
-    </div>
-</form> -->
     <tr>
         <th>Nim</th>
         <th>Nama</th>
@@ -62,6 +56,10 @@
         </td>
     </tr>
     @endforeach
+    @else
+    <p class="text-center fs-4">Mahasiswa tidak ditemukan.</p>
+@endif
+
 </table>
 <!-- {{$mahasiswa->links()}} -->
 <nav aria-label="Page navigation example">
