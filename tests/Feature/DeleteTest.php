@@ -3,12 +3,13 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class DeleteTest extends TestCase
 {
     /**
-     * A basic test example.
+     * A basic feature test example.
      *
      * @return void
      */
@@ -17,5 +18,6 @@ class ExampleTest extends TestCase
         $response = $this->get('/mahasiswa');
 
         $response->assertStatus(200);
+        $response->assertSee("Apakah Anda Yakin Menghapus Data Mahasiswa?");
     }
 }
